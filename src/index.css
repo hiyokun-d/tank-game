@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #aaaaaa;
+
+  /* make it can't be scrolled */
+  overflow: hidden;
+}
+
+canvas {
+  width: 700px;
+  height: 0;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background-color: #3a3b3c;
+  box-shadow: 10px 15px 10px #4a5a6b, 10px #000;
+  animation: height 1s ease-in-out forwards;
+}
+
+@keyframes height {
+  0% {
+    height: 0;
+  }
+  80% {
+    height: 400px;
+  }
+
+  100% {
+    height: 300px;
+  }
+}
+
+#title h1 {
+  position: relative;
+  left: 380px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  animation: leftAnimation 1s ease-in-out forwards;
+}
+
+@keyframes leftAnimation {
+  0% {
+    left: 380px;
+  }
+  80% {
+    left: -50px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+#title h3 {
+  font-size: 1em;
+  text-align: left;
+  color: rgb(117, 117, 117);
+  font-weight: bold;
+}
